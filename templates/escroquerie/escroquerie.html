@@ -1,0 +1,20 @@
+{% include 'main.html' %}
+{%block content %}
+
+    {% for escroquerie in listEscroqueries %}
+<div class="card-group">
+  <div class="card">
+    <img src="{{arnaque.image}}" class="card-img-top" alt="">
+    <div class="card-body">
+        <h5 class="card-title"><a href="" >{{escroquerie.titre}}</a></h5>
+      <p class="card-text">{{escroquerie.contenu}}</p>
+      <p class="card-text"><small class="text-muted">{{escroquerie.date_creation}}</small></p>
+    </div>
+  </div>
+</div>
+{% endfor %}
+{% endblock %}
+
+
+
+

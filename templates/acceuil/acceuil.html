@@ -1,0 +1,29 @@
+
+{% include 'main.html' %}
+{%block content %}
+<div class="container">
+  <div class="row">
+{% for acceuils in listAcceuils %}
+<div class="card col-3 ml-2">
+  <div class="card">
+    <img src="{{ acceuils.image.url }}" class="card-img-top" alt="Card image cap" >
+    <div class="card-body" >
+        <h4 class="card-title"><a>{{acceuils.titre}}</a></h4>
+      <p class="card-text">{{acceuils.contenu|truncatewords:8}}</p>
+      <p class="card-text"><small class="text-muted">publié il ya {{acceuils.date_creation}}</small></p>
+        <a href="" class="btn btn-primary">lire la suite</a>
+    </div>
+  </div>
+</div>
+{% endfor %}
+{% endblock %}
+  </div>
+</div>
+
+
+
+
+
+
+
+
